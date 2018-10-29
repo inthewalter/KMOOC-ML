@@ -512,7 +512,7 @@ def save_mnist_weight(w, file_name):
 
     
 
-def show_mnist(image, inverted = False):
+def show_mnist(image, inverted = False, savefig = None):
     """
     Render a given numpy.uint8 2D array of pixel data.
     image -- 2d image
@@ -536,6 +536,9 @@ def show_mnist(image, inverted = False):
     ax.xaxis.set_ticks_position('top')
     ax.yaxis.set_ticks_position('left')
     plt.show()
+
+    if savefig is not None :
+      plt.savefig(savefig, bbox_inches='tight', dpi=150)
     
     
     
